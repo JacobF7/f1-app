@@ -1,0 +1,28 @@
+a) add engines section in package.json for both node and npm
+  "engines": {
+    "npm": "6.13.4",
+    "node": "12.14.1"
+  }
+
+b) Setup heroku
+1. heroku login (Enter your Heroku credentials)
+2. git init
+3. git add .
+4. git commit -m “initial commit”
+5. heroku create (You should see two links after running this command. Copy the second one)
+6. git remote add heroku PASTE THE LINK YOU JUST COPIED
+7. git push heroku master
+
+If git repo already exists 
+heroku git:remote -a name -> for existing heroku apps
+
+From then onwards:
+1. git add .
+2. git commit -m "new change"
+3. git push heroku master
+
+To open app:
+heroku open
+
+Too see logs:
+heroku logs --tail
