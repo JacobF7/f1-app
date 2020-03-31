@@ -14,7 +14,7 @@ b) Setup heroku
 7. git push heroku master
 
 If git repo already exists 
-heroku git:remote -a name -> for existing heroku apps
+heroku git:remote -a THE_NAME_ON_HEROKU -> for existing heroku apps
 
 From then onwards:
 1. git add .

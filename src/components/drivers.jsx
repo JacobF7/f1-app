@@ -40,31 +40,27 @@ class Drivers extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>F1 Drivers</h1>
-
-        <div className="m-4">
-          <input
-            type="text"
-            placeholder="Driver Name"
-            value={this.state.newDriverName}
-            onChange={event => this.onNewDriverName(event)}
-          ></input>
-          <button
-            className="badge badge-pill badge-success m-2"
-            onClick={() => this.onAdd()}
-          >
-            +
-          </button>
-          <div>
-            {this.state.drivers.map(driver => (
-              <Driver
-                key={driver.id}
-                driver={driver}
-                onDelete={() => this.onDelete(driver.id)}
-                onIncrement={() => this.onIncrement(driver.id)}
-              ></Driver>
-            ))}
-          </div>
+        <input
+          type="text"
+          placeholder="New Driver Name"
+          value={this.state.newDriverName}
+          onChange={event => this.onNewDriverName(event)}
+        ></input>
+        <button
+          className="badge badge-pill badge-success m-2"
+          onClick={() => this.onAdd()}
+        >
+          +
+        </button>
+        <div>
+          {this.state.drivers.map(driver => (
+            <Driver
+              key={driver.id}
+              driver={driver}
+              onDelete={() => this.onDelete(driver.id)}
+              onIncrement={() => this.onIncrement(driver.id)}
+            ></Driver>
+          ))}
         </div>
       </React.Fragment>
     );
